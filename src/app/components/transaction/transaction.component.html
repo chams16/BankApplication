@@ -1,0 +1,46 @@
+
+<img src="../../../assets/img/header-bg.jpg" class="image" alt="">
+<h3 class="text-center transfer">Fastest Money Transfer</h3>
+    <form class="transfeForm align-items-center" [formGroup]="myform" (ngSubmit)="send()">
+      <div class="row ">
+        <div class="col-4">
+          <label for="receiverName" class="form-label">Beneficiary name</label>
+          <input type="text" id="receiverName" class="form-control" aria-describedby="passwordHelpBlock" name="receiverName" formControlName="receiverName">
+        </div>
+        <div class="col-4">
+          <label for="receiverAccountNumber" class="form-label">Baneficiary account number</label>
+          <input type="text" id="receiverAccountNumber" class="form-control" aria-describedby="passwordHelpBlock" name="receiverAccountNumber" formControlName="receiverAccountNumber">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-4">
+          <label for="amount" class="form-label">Amount</label>
+          <input type="text" id="amount" class="form-control" aria-describedby="passwordHelpBlock" name="amount" formControlName="amount">
+        </div>
+        <div class="col-4">
+          <label for="senderName" class="form-label">Sender Name</label>
+          <input type="text" id="senderName" class="form-control" aria-describedby="passwordHelpBlock" name="senderName" formControlName="senderName">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-4">
+          <label for="senderAccountNumber" class="form-label">Sender account number</label>
+          <input type="text" id="senderAccountNumber" class="form-control" aria-describedby="passwordHelpBlock" name="senderAccountNumber" formControlName="senderAccountNumber">
+        </div>
+        <div class="col-2">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock" name="password" formControlName="password">
+        </div>
+        <div class="col-2">
+          <label for="code" class="form-label">Code</label>
+          <input type="text" id="code" class="form-control" aria-describedby="passwordHelpBlock" name="code" formControlName="code">
+        </div>
+      </div>
+        <button   type="submit" class=" btn btn-primary my-3 sendButton ">Transfer</button>
+
+    </form>
+
+
+
+
+

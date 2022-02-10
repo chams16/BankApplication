@@ -1,0 +1,22 @@
+.image {
+    background-color: #212529;
+    background-repeat: no-repeat;
+        height: 300px;
+        width: 100%;
+}
+.transfer{
+    position: relative;
+    margin-top: 20px;
+}
+.transfeForm{
+    margin-left: 400px;
+    margin-top: 50px;
+    position: relative;
+    align-content: center;
+}
+
+.sendButton{
+  position: relative;
+  text-align: center;
+  margin-left: 30%;
+}

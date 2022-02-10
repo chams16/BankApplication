@@ -1,0 +1,43 @@
+<!-- Services-->
+    <h1 class="text-center mt-5">Latest News</h1>
+<hr class=" mx-auto line" />
+    <div class="container">
+       
+       
+            <div class="row mt-5 content">
+                <div class="col col-4" *ngFor="let news of newsList">
+                    <div class="card m-4" style="width: 18rem;">
+                        <img src="https://images.pexels.com/photos/2346006/pexels-photo-2346006.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500"
+                         class="card-img-top photo" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{news.subject}}</h5>
+                          <p class="card-text">{{news.content}}</p>
+                          
+                            <button type="button"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal"
+                            class="btn btn-primary mt-4 answering">
+                               More Detail
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+                                <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title " id="exampleModalLabel">{{news.subject}}</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        {{news.content}}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+    </div>
+ 
