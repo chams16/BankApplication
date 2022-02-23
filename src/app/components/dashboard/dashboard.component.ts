@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ApiServiceService} from "../../service/appService/api-service.service";
+import jwt_decode from "jwt-decode";
 
 @Component({
   selector: 'app-dashboard',
@@ -83,9 +85,16 @@ TransactionHistoric=[
   }
 ]
 
-  constructor() { }
+  constructor(private service:ApiServiceService) { }
+  decoded=jwt_decode(<string>localStorage.getItem("myToken"))
 
   ngOnInit(): void {
+    // @ts-ignore
+    this.service.getUSer(this.decoded.sub).subscribe(
+      res=>{
+
+      }
+    )
   }
 
 }

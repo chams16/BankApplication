@@ -5,6 +5,7 @@ import {ToastrService} from "ngx-toastr";
 import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {Contact} from "../../Models/Contact";
 import jwt_decode from "jwt-decode";
+import jwtDecode from "jwt-decode";
 
 @Component({
   selector: 'app-contact',
@@ -14,8 +15,8 @@ import jwt_decode from "jwt-decode";
 export class ContactComponent implements OnInit {
 
   myform!: FormGroup;
-  token=localStorage.getItem("myToken")
-  //decoded = jwt_decode(this.token);
+
+
 
   constructor(private fb:FormBuilder,private route:Router,private service:ApiServiceService,private toastr:ToastrService) {
     let formControls ={

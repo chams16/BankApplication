@@ -21,6 +21,7 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HttpClientModule } from "@angular/common/http";
 import { ToastrModule, ToastNoAnimationModule, ToastNoAnimation} from "ngx-toastr";
 import { EmployeeComponent } from './components/employee/employee.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { EmployeeComponent } from './components/employee/employee.component';
     TransactionComponent,
     DashboardComponent,
     AboutUsComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    ProfileComponent
 
   ],
   imports: [

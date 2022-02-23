@@ -12,6 +12,7 @@ import { ServiceComponent } from './components/service/service.component';
 import { TransactionComponent } from './components/transaction/transaction.component';
 import {AuthGuard} from "./guard/auth.guard";
 import {EmployeeComponent} from "./components/employee/employee.component";
+import {ProfileComponent} from "./components/profile/profile.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'faq', component: AnswerQuestionComponent},
+  {path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({

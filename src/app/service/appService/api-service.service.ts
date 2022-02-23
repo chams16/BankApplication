@@ -9,8 +9,7 @@ export class ApiServiceService {
 
 
   private contactUsUrl= "http://localhost:9000/api/contact/send"
-  private token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGFtc2VkZGluZTExMTlAZ21haWwuY29tIiwiZXhwIjoxNjQ0NTYyMDk5LCJpYXQiOjE2NDQ1MjYwOTl9.ULI33RFxDZLoWALlk9FQjPNE46sQDmb0ACZ4yJGA5dI"
-
+  private token = localStorage.getItem("myToken")
 
   constructor(private http:HttpClient) { }
 
@@ -18,6 +17,15 @@ export class ApiServiceService {
     let __headers = new HttpHeaders()
     __headers = __headers.set('Authorization','Bearer '+this.token)
     return this.http.post(this.contactUsUrl,request,{
+      headers:__headers
+    })
+  }
+
+  getUSer(email:string){
+    let __headers = new HttpHeaders()
+    __headers = __headers.set('Authorization','Bearer '+ this.token)
+    console.log(__headers)
+    return this.http.get("http://localhost:9000/api/person/find/natural/"+email,{
       headers:__headers
     })
   }

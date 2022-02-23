@@ -29,7 +29,7 @@
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
                 <li class="text-center text-3 py-2">Hi,{{user}}</li>
                 <li class="dropdown-divider mx-n3"></li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i>My Profile</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/profile']"><i class="fas fa-user"></i>My Profile</a></li>
                 <li class="dropdown-divider mx-n3"></li>
                 <li><a class="dropdown-item" href="#"><i class="fas fa-life-ring"></i>Need Help?</a></li>
                 <li><a class="dropdown-item logout" (click)="logout()"><i class="fas fa-sign-out-alt"></i>Sign Out</a></li>

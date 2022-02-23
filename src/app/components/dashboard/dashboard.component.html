@@ -1,19 +1,19 @@
 <div id="content" class="py-4">
     <div class="container">
-      <div class="row"> 
-        
+      <div class="row">
+
         <!-- Left Panel
         ============================================= -->
-        <aside class="col-lg-3"> 
-          
+        <aside class="col-lg-3">
+
           <!-- Profile Details
           =============================== -->
           <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
  <img class="rounded-circle" src="../../../assets/img/téléchargement.jpg" alt="">
             <p class="text-3 font-weight-500 mb-2">Hello, {{profilUser}}</p>
           </div>
-          <!-- Profile Details End --> 
-          
+          <!-- Profile Details End -->
+
           <!-- Available Balance
           =============================== -->
           <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
@@ -23,8 +23,8 @@
             <hr class="mx-n3">
             <div class="d-flex ml-5"><a [routerLink]="['/transaction']" class="btn-link text-center">transfer</a> </div>
           </div>
-          <!-- Available Balance End --> 
-          
+          <!-- Available Balance End -->
+
           <!-- Need Help?
           =============================== -->
           <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
@@ -33,11 +33,11 @@
             <p class="text-muted opacity-8 mb-4">Have questions or concerns regrading your account?<br>
               Our experts are here to help!.</p>
             <a [routerLink]="['/contact']" class="btn btn-primary btn-block">Chate with Us</a> </div>
-          <!-- Need Help? End --> 
-          
+          <!-- Need Help? End -->
+
         </aside>
-        <!-- Left Panel End --> 
-        
+        <!-- Left Panel End -->
+
         <!-- Middle Panel
         ============================================= -->
         <div class="col-lg-9">
@@ -58,10 +58,10 @@
                     <div class="card mb-3 widget-content bg-arielle-smile widget2">
                         <div class="widget-content-wrapper text-white">
                             <div class="widget-content-left">
-                                <div class="widget-heading text-center pt-2">Account Type</div>
+                                <div class="widget-heading text-center pt-2">User Type</div>
                             </div>
                             <div class="widget-content-right">
-                                <div class="widget-numbers text-white p-2 text-center"><span>{{Imatricule}}</span></div>
+                                <div class="widget-numbers text-white p-2 text-center"><span>INITIATOR</span></div>
                             </div>
                         </div>
                     </div>
@@ -70,16 +70,16 @@
                     <div class="card mb-3 widget-content bg-grow-early widget3">
                         <div class="widget-content-wrapper text-white">
                             <div class="widget-content-left">
-                                <div class="widget-heading pt-2 text-center">Currency</div>
+                                <div class="widget-heading pt-2 text-center">Identity</div>
                             </div>
                             <div class="widget-content-right">
-                                <div class="widget-numbers text-white p-2 text-center"><span>{{currencyType | currency}}</span></div>
+                                <div class="widget-numbers text-white p-2 text-center"><span>{{Imatricule}}</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-          
+
           <!-- All Transactions
           ============================================= -->
           <div class="bg-white shadow-sm rounded py-4 mb-4 mt-3">
@@ -94,8 +94,8 @@
                 <div class="col-3 col-sm-2 text-right">Amount</div>
               </div>
             </div>
-            <!-- Title End --> 
-            
+            <!-- Title End -->
+
             <!-- Transaction List-->
             <div class="transaction-list" *ngFor="let transfer of TransactionHistoric">
               <div class="transaction-item px-4 py-3" data-toggle="modal" data-target="#transaction-detail">
@@ -106,12 +106,12 @@
                   <div class="col-3 col-sm-2 text-right text-4"> <span class="text-nowrap">- {{transfer.amount | currency}}</span> <span class="text-2 text-uppercase">{{transfer.currency}}</span> </div>
                 </div>
               </div>
-              
-            </div>
-            <!-- Transaction List End --> 
-            
 
-            
+            </div>
+            <!-- Transaction List End -->
+
+
+
             <!-- Pagination
             ============================================= -->
             <ul class="pagination justify-content-center mt-4 mb-0">
@@ -123,12 +123,12 @@
               <li class="page-item"><a class="page-link" href="#">15</a></li>
               <li class="page-item"> <a class="page-link" href="#"><i class="fas fa-angle-right"></i></a> </li>
             </ul>
-            <!-- Paginations end --> 
-            
+            <!-- Paginations end -->
+
           </div>
-          <!-- All Transactions End --> 
+          <!-- All Transactions End -->
         </div>
-        <!-- Middle End --> 
+        <!-- Middle End -->
       </div>
     </div>
   </div>
