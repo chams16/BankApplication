@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {EmployeeServiceService} from "../../service/employeeService/employee-service.service";
+import {NaturalPersonDto} from "../../Models/naturalPersonDto";
 
 @Component({
   selector: 'app-employee',
@@ -7,9 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor() { }
+  EmployeeList:NaturalPersonDto[]=[]
+
+  constructor(private employeeService:EmployeeServiceService) { }
 
   ngOnInit(): void {
+    this.employeeService.getEmployee().subscribe(
+      res=>{
+        this.EmployeeList=res
+        console.log(this.EmployeeList)
+      },err=>{
+        console.log(err)
+      }
+    )
   }
+
+  sendMoney(employee:NaturalPersonDto){
+    console.log(employee)
+  }
+
+
+
+
 
 }

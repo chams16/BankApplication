@@ -1,83 +1,84 @@
 <div id="content" class="py-4">
-    <div class="container">
-      <div class="row">
+  <div class="container">
+    <div class="row">
 
-        <!-- Left Panel
+      <!-- Left Panel
         ============================================= -->
-        <aside class="col-lg-3">
+      <aside class="col-lg-3">
 
-          <!-- Profile Details
+        <!-- Profile Details
           =============================== -->
-          <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
- <img class="rounded-circle" src="../../../assets/img/téléchargement.jpg" alt="">
-            <p class="text-3 font-weight-500 mb-2">Hello, {{profilUser}}</p>
-          </div>
-          <!-- Profile Details End -->
+        <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
+          <img class="rounded-circle" src="../../../assets/img/téléchargement.jpg" alt="">
+          <p class="text-3 font-weight-500 mb-2">Hello, {{profilUser}}</p>
+        </div>
+        <!-- Profile Details End -->
 
-          <!-- Available Balance
+        <!-- Available Balance
           =============================== -->
-          <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
-            <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
-            <h3 class="text-9 font-weight-400">{{balance | currency}}</h3>
-            <p class="mb-2 text-muted opacity-8">Available Balance</p>
-            <hr class="mx-n3">
-            <div class="d-flex ml-5"><a [routerLink]="['/transaction']" class="btn-link text-center">transfer</a> </div>
-          </div>
-          <!-- Available Balance End -->
+        <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
+          <div class="text-17 text-light my-3"><i class="fas fa-wallet"></i></div>
+          <h3 class="text-9 font-weight-400">{{balance | currency}}</h3>
+          <p class="mb-2 text-muted opacity-8">Available Balance</p>
+          <hr class="mx-n3">
+          <div class="d-flex ml-5"><a [routerLink]="['/transaction']" class="btn-link text-center">transfer</a> </div>
+        </div>
+        <!-- Available Balance End -->
 
-          <!-- Need Help?
+        <!-- Need Help?
           =============================== -->
-          <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
-            <div class="text-17 text-light my-3"><i class="fas fa-comments"></i></div>
-            <h3 class="text-5 font-weight-400 my-4">Need Help?</h3>
-            <p class="text-muted opacity-8 mb-4">Have questions or concerns regrading your account?<br>
-              Our experts are here to help!.</p>
-            <a [routerLink]="['/contact']" class="btn btn-primary btn-block">Chate with Us</a> </div>
-          <!-- Need Help? End -->
+        <div class="bg-white shadow-sm rounded text-center p-3 mb-4">
+          <div class="text-17 text-light my-3"><i class="fas fa-comments"></i></div>
+          <h3 class="text-5 font-weight-400 my-4">Need Help?</h3>
+          <p class="text-muted opacity-8 mb-4">Have questions or concerns regrading your account?<br>
+            Our experts are here to help!.</p>
+          <a [routerLink]="['/contact']" class="btn btn-primary btn-block">Chate with Us</a>
+        </div>
+        <!-- Need Help? End -->
 
-        </aside>
-        <!-- Left Panel End -->
+      </aside>
+      <!-- Left Panel End -->
 
-        <!-- Middle Panel
+      <!-- Middle Panel
         ============================================= -->
-        <div class="col-lg-9">
-            <div class="row mb-5">
-                <div class="col-md-3 col-xl-4 ">
-                    <div class="card mb-3 widget-content bg-midnight-bloom widget1">
-                        <div class="widget-content-wrapper text-white">
-                            <div class="widget-content-left">
-                                <div class="widget-heading text-center pt-2">Account Number</div>
-                            </div>
-                            <div class="widget-content-right">
-                                <div class="widget-numbers text-white text-center p-2"><span>{{accountNumber}}</span></div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="col-lg-9">
+        <div class="row mb-5">
+          <div class="col-md-3 col-xl-4 ">
+            <div class="card mb-3 widget-content bg-midnight-bloom widget1">
+              <div class="widget-content-wrapper text-white">
+                <div class="widget-content-left">
+                  <div class="widget-heading text-center pt-2">Account Number</div>
                 </div>
-                <div class="col-md-3 col-xl-4">
-                    <div class="card mb-3 widget-content bg-arielle-smile widget2">
-                        <div class="widget-content-wrapper text-white">
-                            <div class="widget-content-left">
-                                <div class="widget-heading text-center pt-2">User Type</div>
-                            </div>
-                            <div class="widget-content-right">
-                                <div class="widget-numbers text-white p-2 text-center"><span>INITIATOR</span></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="widget-content-right">
+                  <div class="widget-numbers text-white text-center p-2"><span>{{accountNumber}}</span></div>
                 </div>
-                <div class="col-md-3 col-xl-4">
-                    <div class="card mb-3 widget-content bg-grow-early widget3">
-                        <div class="widget-content-wrapper text-white">
-                            <div class="widget-content-left">
-                                <div class="widget-heading pt-2 text-center">Identity</div>
-                            </div>
-                            <div class="widget-content-right">
-                                <div class="widget-numbers text-white p-2 text-center"><span>{{Imatricule}}</span></div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-xl-4">
+            <div class="card mb-3 widget-content bg-arielle-smile widget2">
+              <div class="widget-content-wrapper text-white">
+                <div class="widget-content-left">
+                  <div class="widget-heading text-center pt-2">User Type</div>
                 </div>
+                <div class="widget-content-right">
+                  <div class="widget-numbers text-white p-2 text-center"><span>VALIDATOR</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-xl-4">
+            <div class="card mb-3 widget-content bg-grow-early widget3">
+              <div class="widget-content-wrapper text-white">
+                <div class="widget-content-left">
+                  <div class="widget-heading pt-2 text-center">Identity</div>
+                </div>
+                <div class="widget-content-right">
+                  <div class="widget-numbers text-white p-2 text-center"><span>{{Imatricule}}</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
           <!-- All Transactions
@@ -88,8 +89,8 @@
             =============================== -->
             <div class="transaction-title py-2 px-4">
               <div class="row">
-                <div class="col-2 col-sm-1 text-center"><span class="">Date</span></div>
-                <div class="col col-sm-7">Description</div>
+                <div class="col-2 col-sm-1 text-center"><span class="">Code</span></div>
+                <div class="col col-sm-7">Receiver</div>
                 <div class="col-auto col-sm-2 d-none d-sm-block text-center">Status</div>
                 <div class="col-3 col-sm-2 text-right">Amount</div>
               </div>
@@ -97,13 +98,47 @@
             <!-- Title End -->
 
             <!-- Transaction List-->
-            <div class="transaction-list" *ngFor="let transfer of TransactionHistoric">
+            <div class="transaction-list" *ngFor="let transfer of Transaction">
               <div class="transaction-item px-4 py-3" data-toggle="modal" data-target="#transaction-detail">
                 <div class="row align-items-center flex-row">
-                  <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 font-weight-300">{{transfer.date}}</span> <span class="d-block text-1 font-weight-300 text-uppercase">APR</span> </div>
-                  <div class="col col-sm-7"> <span class="d-block text-4">{{transfer.bankName}}</span> <span class="text-muted">{{transfer.type}}</span> </div>
-                  <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3"> <span class="text-warning" data-toggle="tooltip" data-original-title="In Progress"><i class="fas fa-ellipsis-h"></i></span> </div>
-                  <div class="col-3 col-sm-2 text-right text-4"> <span class="text-nowrap">- {{transfer.amount | currency}}</span> <span class="text-2 text-uppercase">{{transfer.currency}}</span> </div>
+                  <div class="col-2 col-sm-1 text-center"> <span class="d-block text-4 font-weight-300">{{transfer.taskData.code}}</span>
+                  </div>
+                  <div class="col col-sm-7"> <span class="d-block text-4">{{transfer.taskData.receiver}}</span> <span
+                      class="text-muted">{{transfer.taskData.receiverAccountNumber}}</span> </div>
+                  <div class="col-auto col-sm-2 d-none d-sm-block text-center text-3">
+                    <span class="text-warning" data-bs-toggle="modal" disabled="transfer.status!=='En Attente'"
+                      data-bs-target="#exampleModal" style="cursor: pointer">
+                      validate
+                    </span>
+
+                    <!-- Modal to accept or reject transaction-->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                      aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Transaction from {{transfer.taskData.sender}} to {{transfer.taskData.receiver}}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            Do you Want to accept or reject this transaction with code {{transfer.taskData.code}}?
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger align-items-center"
+                              (click)="reject(transfer)">reject</button>
+                            <button type="button" class="btn btn-primary align-items-center"
+                              (click)="accept(transfer)">Accept</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <div class="col-3 col-sm-2 text-right text-4">
+                    <span class="text-nowrap">- {{transfer.taskData.amount | currency}}</span>
+                    <span class="text-2 text-uppercase"> USD</span>
+                  </div>
                 </div>
               </div>
 
@@ -115,9 +150,11 @@
             <!-- Pagination
             ============================================= -->
             <ul class="pagination justify-content-center mt-4 mb-0">
-              <li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></a> </li>
+              <li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1"><i
+                    class="fas fa-angle-left"></i></a> </li>
               <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item active"> <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a> </li>
+              <li class="page-item active"> <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+              </li>
               <li class="page-item"><a class="page-link" href="#">3</a></li>
               <li class="page-item d-flex align-content-center flex-wrap text-muted text-5 mx-1">......</li>
               <li class="page-item"><a class="page-link" href="#">15</a></li>

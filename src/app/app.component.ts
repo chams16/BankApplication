@@ -29,5 +29,8 @@ export class AppComponent {
   //     }
   //   )
   // }
+  ngOnInit():void{
+    console.log("start")
+  }
 
 }

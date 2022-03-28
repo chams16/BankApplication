@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiServiceService} from "../../service/appService/api-service.service";
 import jwt_decode from "jwt-decode";
+import {TransactionService} from "../../service/transactionService/transaction.service";
+import {Task} from "../../Models/Task";
+
 
 @Component({
   selector: 'app-dashboard',
@@ -9,92 +12,119 @@ import jwt_decode from "jwt-decode";
 })
 export class DashboardComponent implements OnInit {
 
+
   balance=250
   profilUser="chams "
   accountNumber=2358964895236256
   Imatricule=589632
   currencyType=0
-TransactionHistoric=[
-  {
-    "date":"16",
-    "bankName":"HDFC Bank",
-    "type":"Withdraw to Bank account",
-    "amount":"562",
-    "status":"In Progress",
-    "currency":"(USD)"
-  },
-  {
-    "date":"16",
-    "bankName":"HDFC Bank",
-    "type":"Withdraw to Bank account",
-    "amount":"562",
-    "currency":"(USD)"
-  },
-  {
-    "date":"16",
-    "bankName":"HDFC Bank",
-    "type":"Withdraw to Bank account",
-    "amount":"562",
-    "status":"In Progress",
-    "currency":"(USD)"
-  },
-  {
-    "date":"16",
-    "bankName":"HDFC Bank",
-    "type":"Withdraw to Bank account",
-    "amount":"562",
-    "status":"In Progress",
+  Transaction: any[] =[]
+  TransactionHistoric=[
+    {
+      "date":"16",
+      "bankName":"HDFC Bank",
+      "type":"Withdraw to Bank account",
+      "amount":"562",
+      "status":"En Attente",
+      "currency":"(USD)"
+    },
+    {
+      "date":"16",
+      "bankName":"HDFC Bank",
+      "type":"Withdraw to Bank account",
+      "amount":"562",
+      "status":"Accepted",
+      "currency":"(USD)"
+    },
+    {
+      "date":"16",
+      "bankName":"HDFC Bank",
+      "type":"Withdraw to Bank account",
+      "amount":"562",
+      "status":"Accepted",
+      "currency":"(USD)"
+    },
+    {
+      "date":"16",
+      "bankName":"HDFC Bank",
+      "type":"Withdraw to Bank account",
+      "amount":"562",
+      "status":"Rejected",
 
-    "currency":"(USD)"
-  },
-  {
-    "date":"16",
-    "bankName":"HDFC Bank",
-    "type":"Withdraw to Bank account",
-    "amount":"562",
-    "status":"In Progress",
+      "currency":"(USD)"
+    },
+    {
+      "date":"16",
+      "bankName":"HDFC Bank",
+      "type":"Withdraw to Bank account",
+      "amount":"562",
+      "status":"En Attente",
 
-    "currency":"(USD)"
-  },
-  {
-    "date":"16",
-    "bankName":"HDFC Bank",
-    "type":"Withdraw to Bank account",
-    "amount":"562",
-    "status":"In Progress",
+      "currency":"(USD)"
+    },
+    {
+      "date":"16",
+      "bankName":"HDFC Bank",
+      "type":"Withdraw to Bank account",
+      "amount":"562",
+      "status":"En Attente",
 
-    "currency":"(USD)"
-  },
-  {
-    "date":"16",
-    "bankName":"HDFC Bank",
-    "type":"Withdraw to Bank account",
-    "amount":"562",
-    "status":"In Progress",
+      "currency":"(USD)"
+    },
+    {
+      "date":"16",
+      "bankName":"HDFC Bank",
+      "type":"Withdraw to Bank account",
+      "amount":"562",
+      "status":"Rejected",
 
-    "currency":"(USD)"
-  },
-  {
-    "date":"16",
-    "bankName":"HDFC Bank",
-    "type":"Withdraw to Bank account",
-    "amount":"562",
-    "status":"In Progress",
+      "currency":"(USD)"
+    },
+    {
+      "date":"16",
+      "bankName":"HDFC Bank",
+      "type":"Withdraw to Bank account",
+      "amount":"562",
+      "status":"En Attente",
 
-    "currency":"(USD)"
-  }
-]
+      "currency":"(USD)"
+    }
+  ]
 
-  constructor(private service:ApiServiceService) { }
+  constructor(private service:ApiServiceService,private transactionService:TransactionService) { }
   decoded=jwt_decode(<string>localStorage.getItem("myToken"))
 
   ngOnInit(): void {
-    // @ts-ignore
-    this.service.getUSer(this.decoded.sub).subscribe(
-      res=>{
+      this.transactionService.getTasks().subscribe(
+        res=>{
+          console.log(res)
+          console.log(this.Transaction);
+          this.Transaction=res
+          console.log(this.Transaction)
+        },err=>{
+          console.log(err)
+    }
+      )
+  }
 
+
+  reject(task:Task){
+    this.transactionService.rejectTransaction(task).subscribe(
+      res=>{
+        console.log(res);
+        this.ngOnInit
+        
+      },err=>{
+        console.log(err);
+        
       }
     )
   }
+
+  accept(task:Task){
+    this.transactionService.acceptTransaction(task)
+  }
+
+
 
 }
