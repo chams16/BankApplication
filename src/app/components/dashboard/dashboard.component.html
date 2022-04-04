@@ -96,6 +96,9 @@
               </div>
             </div>
             <!-- Title End -->
+            <div *ngIf="!Transaction?.length" class="alert alert-warning mt-4 mb-4 text-center" role="alert">
+              There's no transaction available<br/> <a  [routerLink]="['/transaction']" class="alert-link"> Go and Create Transaction</a>.
+            </div>
 
             <!-- Transaction List-->
             <div class="transaction-list" *ngFor="let transfer of Transaction">
@@ -132,6 +135,7 @@
                         </div>
                       </div>
                     </div>
+                    
 
 
                   </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EmployeeServiceService} from "../../service/employeeService/employee-service.service";
 import {NaturalPersonDto} from "../../Models/naturalPersonDto";
+import jwt_decode from "jwt-decode";
 
 @Component({
   selector: 'app-employee',
@@ -8,6 +9,9 @@ import {NaturalPersonDto} from "../../Models/naturalPersonDto";
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
+
+
+
 
   EmployeeList:NaturalPersonDto[]=[]
 
@@ -18,6 +22,7 @@ export class EmployeeComponent implements OnInit {
       res=>{
         this.EmployeeList=res
         console.log(this.EmployeeList)
+
       },err=>{
         console.log(err)
       }

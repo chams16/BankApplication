@@ -1,9 +1,9 @@
 <div class="container d-flex mt-5">
   <div class="main">
-    <div class="row">
-      <div class="col-md-3">
-        <div>
-          <div class="one" *ngFor="let employee of EmployeeList">
+    <div class="row align-content-center">
+      <div class="col-md-3" *ngFor="let employee of EmployeeList">
+
+          <div class="one" >
             <div class="text-right pr-2 pt-1"><i class="mdi mdi-dots-vertical dotdot"></i></div>
             <div class="d-flex justify-content-center my-2"><img src="https://i.imgur.com/hczKIze.jpg" width="50" class="rounded-circle"></div>
             <div class="text-center"> <span class="name">{{employee.lastName}} {{employee.firstName}}</span>
@@ -11,6 +11,9 @@
             </div>
             <div class="text-center"> <span class="total d-block pt-2">{{employee.phone}}</span> <span class="money">{{employee.identity}}</span> </div>
             <div class="text-center align-items-center d-flex justify-content-center pt-2 pb-2"><span class="details" style="cursor: pointer" (click)="sendMoney(employee)">View Details</span><i class="mdi mdi-arrow-right right pl-1"></i></div>
+
+          <div *ngIf="!EmployeeList?.length" class="alert alert-danger mt-4 mb-4 text-center" role="alert">
+            There's no Employee added Yet.
           </div>
         </div>
       </div>

@@ -1,12 +1,23 @@
 .widget1{
     background-color: rgb(220, 134, 76);
     border-radius: 10px;
+  height: 98px;
 }
 .widget2{
     background-color: rgb(228, 80, 80);
     border-radius: 10px;
+    height: 98px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 10px;
 }
 .widget3{
     background-color: rgb(86, 86, 251);
     border-radius: 10px;
+    height: 98px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 10px;
 }

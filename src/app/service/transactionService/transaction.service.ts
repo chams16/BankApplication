@@ -44,6 +44,14 @@ export class TransactionService {
   }
 
   acceptTransaction(task:Task){
+    let __headers = new HttpHeaders()
+    __headers = __headers.set('Authorization','Bearer '+ this.token)
+    console.log(__headers)
+    console.log("rejected");
+    console.log(task);
+    return this.http.post(this.rejectUrl+task.taskId,{
+      headers:__headers
+    })    
     console.log("accepted");
     console.log(task);
     
